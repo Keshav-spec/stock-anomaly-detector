@@ -2,7 +2,7 @@
 
 > An end-to-end machine learning system that detects statistically unusual trading behaviour in Indian stock market data using **Isolation Forest** and **LSTM Autoencoder** models, enriched with **FinBERT** financial sentiment analysis and served through an interactive Streamlit dashboard.
 
-**Live Demo:** [your-app.streamlit.app](https://stock-anomaly-detector.streamlit.app/) 
+**Live Demo:** [your-app.streamlit.app](https://stock-anomaly-detector.streamlit.app/)   
 **Dataset:** NSE-listed stocks via Yahoo Finance API (2-year historical data)  
 **Built:** May 2026
 
