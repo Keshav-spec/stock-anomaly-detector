@@ -1,33 +1,39 @@
-# 📈 Real-Time Stock Anomaly Detector
+# Real-Time Stock Anomaly Detector
 
 > An end-to-end machine learning system that detects statistically unusual trading behaviour in Indian stock market data using **Isolation Forest** and **LSTM Autoencoder** models, enriched with **FinBERT** financial sentiment analysis and served through an interactive Streamlit dashboard.
 
-🔗 **Live Demo:** [your-app.streamlit.app](https://your-app.streamlit.app) ← replace with your link  
-📂 **Dataset:** NSE-listed stocks via Yahoo Finance API (2-year historical data)  
-🗓 **Built:** May 2026
+**Live Demo:** [your-app.streamlit.app](https://stock-anomaly-detector.streamlit.app/) 
+**Dataset:** NSE-listed stocks via Yahoo Finance API (2-year historical data)  
+**Built:** May 2026
 
 ---
 
-## 📸 Dashboard Preview
+##  Dashboard Preview
 
 > **Screenshot 1 — Main anomaly chart (Isolation Forest)**  
-> *Caption: Add your Image 1 here — the full price chart with red anomaly dots*
 
-![Main Dashboard](screenshots/dashboard_main.png)
+
+<img width="1889" height="816" alt="image" src="https://github.com/user-attachments/assets/22aee284-3515-43ef-81bb-5c73b950d171" />
+
+
+
+
 
 > **Screenshot 2 — Chart explanation + Score distribution**  
-> *Caption: Add your Image 2 here — the "How to read this chart" panel + histogram*
 
-![Insight Panel](screenshots/insight_panel.png)
+
+<img width="1554" height="769" alt="image" src="https://github.com/user-attachments/assets/15d7c1a5-582d-42da-885e-a09c7440a66d" />
+
 
 > **Screenshot 3 — Recent anomalies table**  
-> *Caption: Add your Image 3 here — the formatted anomaly table with dates and scores*
 
-![Anomaly Table](screenshots/anomaly_table.png)
+
+<img width="1541" height="512" alt="image" src="https://github.com/user-attachments/assets/5f407675-9509-4f4d-b606-d6ccbfefb93b" />
+
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Most retail investors and analysts lack tools to quickly identify when a stock is behaving in a statistically abnormal way — whether due to earnings surprises, macroeconomic shocks, or unusual trading volume. This project builds a full anomaly detection pipeline that:
 
@@ -39,7 +45,7 @@ Most retail investors and analysts lack tools to quickly identify when a stock i
 
 ---
 
-## 🧠 Models Used & Why
+##  Models Used & Why
 
 ### 1. Isolation Forest
 **What it is:** An unsupervised ensemble method that detects anomalies by randomly partitioning the feature space and measuring how quickly a data point gets isolated.
@@ -79,7 +85,7 @@ Most retail investors and analysts lack tools to quickly identify when a stock i
 
 ---
 
-## 🗂 Features Engineered
+##  Features Engineered
 
 | Feature | Description | Why it matters |
 |---|---|---|
@@ -94,7 +100,7 @@ Most retail investors and analysts lack tools to quickly identify when a stock i
 
 ---
 
-## 💬 Sentiment Analysis Layer
+##  Sentiment Analysis Layer
 
 Beyond price and volume, this project adds a **news sentiment dimension** using **FinBERT** — a BERT-based model specifically fine-tuned on financial text (research papers, earnings calls, financial news).
 
@@ -105,7 +111,7 @@ General models (VADER, TextBlob) misclassify financial language. For example, "t
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -120,7 +126,7 @@ General models (VADER, TextBlob) misclassify financial language. For example, "t
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 stock-anomaly-detector/
@@ -157,7 +163,7 @@ stock-anomaly-detector/
 
 ---
 
-## ▶️ Run Locally
+##  Run Locally
 
 **1. Clone the repository**
 ```bash
@@ -201,7 +207,7 @@ Open [localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 📊 Key Results — RELIANCE.NS
+##  Key Results — RELIANCE.NS
 
 | Model | Anomalies Detected | Anomaly Rate | Notable Flagged Dates |
 |---|---|---|---|
@@ -212,7 +218,7 @@ The Isolation Forest flagged **07 Apr 2025** (₹1161 close, anomaly score −0.
 
 ---
 
-## 🔍 Validation Methodology
+##  Validation Methodology
 
 Since no labelled ground truth exists for "correct" anomalies, validation used a multi-method approach:
 
@@ -233,7 +239,7 @@ Since no labelled ground truth exists for "correct" anomalies, validation used a
 
 ---
 
-## 👤 Author
+##  Author
 
 **Kesahv Sharma** — Data Analytics Student  
 📧 keshavsharma71982@gmail.com  
