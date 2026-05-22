@@ -24,3 +24,4 @@ def predict_anomalies(X, model, scaler):
     preds = model.predict(X_scaled)       # -1 = anomaly, 1 = normal
     scores = model.score_samples(X_scaled)  # lower = more anomalous
     return preds, scores
+
