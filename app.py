@@ -13,9 +13,9 @@ from sentiments.news_fetcher import fetch_news
 from sentiments.finbert_sentiments import get_sentiment_score
 
 
-# ======================================================
+#  
 # PAGE CONFIG
-# ======================================================
+#  
 
 st.set_page_config(
     page_title="Stock Anomaly Detector",
@@ -91,16 +91,16 @@ p, div {
 </style>
 """, unsafe_allow_html=True)
 
-# ======================================================
+#  
 # TITLE
-# ======================================================
+#  
 
 st.title("📈 Real-Time Stock Anomaly Detector")
 
 
-# ======================================================
+#  
 # SIDEBAR
-# ======================================================
+#  
 
 st.sidebar.header("Controls")
 
@@ -123,9 +123,9 @@ model_type = st.sidebar.radio(
 )
 
 
-# ======================================================
+#  
 # LOAD DATA
-# ======================================================
+#  
 
 with st.spinner("Loading stock data..."):
 
@@ -134,9 +134,9 @@ with st.spinner("Loading stock data..."):
     df = process_features(df)
 
 
-# ======================================================
+#  
 # RUN MODEL
-# ======================================================
+#  
 
 with st.spinner("Running anomaly detection..."):
 
@@ -153,9 +153,9 @@ df["anomaly"] = preds
 df["anomaly_score"] = scores
 
 
-# ======================================================
+#  
 # METRICS
-# ======================================================
+#  
 
 col1, col2, col3 = st.columns(3)
 
@@ -175,9 +175,9 @@ col3.metric(
 )
 
 
-# ======================================================
+#  
 # ANOMALY CHART
-# ======================================================
+#  
 
 st.subheader(f"{ticker} Anomaly Detection")
 
@@ -325,7 +325,12 @@ fig2.add_trace(
 fig2.update_layout(
     barmode="overlay",
 
+    xaxis_title="Isolation Forest Anomaly Score",
+
+    yaxis_title="Number of Trading Days",
+
     paper_bgcolor="#0e1117",
+
     plot_bgcolor="#0e1117",
 
     font=dict(
@@ -340,9 +345,9 @@ st.plotly_chart(
     width="stretch"
 )
 
-# ======================================================
+#  
 # RECENT ANOMALIES TABLE
-# ======================================================
+#  
 
 st.subheader("🚨 Recent Anomalies")
 
@@ -390,9 +395,9 @@ st.dataframe(
 )
 
 
-# ======================================================
+#  
 # FOOTER
-# ======================================================
+#  
 
 st.markdown("---")
 
